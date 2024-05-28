@@ -1,12 +1,12 @@
 # First of all, thanks for this awesome nginx.conf that saved my life :)
 https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/postgres/fpm/web/nginx.conf
 
-## If you want HTTPS, please add this to config.php inside config folder (nextcloud)
+## If you want HTTPS, please add this in config.php (nextcloud/config/config.php)
 ```
 'overwriteprotocol' => 'https'
 ```
 
-## If you want to use custom domain, please add it in config.php inside config folder (nextcloud)
+## If you want to use custom domain, please add this in config.php (nextcloud/config/config.php)
 ```
 ...
 'trusted_domains' =>
