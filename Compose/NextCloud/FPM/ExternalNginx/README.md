@@ -20,3 +20,8 @@ https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecur
 ```
 
 > Please use only DNS name, without http / https, like: server1.example.com
+
+
+### Useful links for docker:
+https://hub.docker.com/_/nextcloud/tags
+https://hub.docker.com/_/postgres/tags
