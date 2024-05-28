@@ -23,5 +23,5 @@ https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecur
 
 
 ### Useful links for docker:
-https://hub.docker.com/_/nextcloud/tags <br />
-https://hub.docker.com/_/postgres/tags <br />
+https://hub.docker.com/_/nextcloud/tags \
+https://hub.docker.com/_/postgres/tags \
