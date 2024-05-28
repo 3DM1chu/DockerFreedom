@@ -31,6 +31,6 @@ services:
     ports:
       - 9000:80
     volumes:
-      - /mnt/hdd_data/nextcloud:/var/www/html:z,ro
+      - /mnt/nextcloud:/var/www/html:z,ro
     depends_on:
       - app
