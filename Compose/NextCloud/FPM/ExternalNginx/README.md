@@ -1,13 +1,15 @@
-# First of all, thanks for this awesome nginx.conf that saved my life :)
+App is working under port 9000
+
+## First of all, thanks for this awesome nginx.conf that saved my life :)
 https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/postgres/fpm/web/nginx.conf
 
-## If you want HTTPS, please add this in config.php
+### If you want HTTPS, please add this in config.php
 > nextcloud/config/config.php
 ```
 'overwriteprotocol' => 'https'
 ```
 
-## If you want to use custom domain, please add this in config.php
+### If you want to use custom domain, please add this in config.php
 > nextcloud/config/config.php
 ```
 ...
