@@ -1,7 +1,7 @@
 # DockerFreedom
 Welcome to DockerFreedom! Here, I share my awesome Docker-ready tips and tricks to make your containerization journey smoother. No more Docker frustrations! 😄
 
-## Docker Tips
+## < Docker Tips >
 1. You don't need to use the entire container ID to identify a container.
 
 ## < Docker Useful Commands >
