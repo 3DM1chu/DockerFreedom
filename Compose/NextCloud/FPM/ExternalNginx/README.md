@@ -4,13 +4,13 @@ App is working under port 9000
 https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/postgres/fpm/web/nginx.conf
 
 ### If you want HTTPS, please add this in config.php
-> nextcloud/config/config.php
+> var/www/html/config/config.php or NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php
 ```
 'overwriteprotocol' => 'https'
 ```
 
 ### If you have problems with not seeing DB while initialization, please add this in config.php
-> nextcloud/config/config.php
+> var/www/html/config/config.php or NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php
 ```
   'dbtype' => 'pgsql',
   'dbname' => 'nextcloud',
@@ -20,7 +20,7 @@ https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecur
 ```
 
 ### If you want to use custom domain, please add this in config.php
-> nextcloud/config/config.php
+> var/www/html/config/config.php or NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php
 ```
 ...
 'trusted_domains' =>
@@ -32,7 +32,6 @@ https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecur
 ),
 ...
 ```
-
 > Please use only DNS name, without http / https, like: server1.example.com
 
 
