@@ -1,28 +1,30 @@
-App is working under port 9000
+## App is Working Under Port 9000
 
-## First of all, thanks for this awesome nginx.conf that saved my life :)
-https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/postgres/fpm/web/nginx.conf
+## First of all, Thanks for this Awesome nginx.conf That Saved My Life 😊
+[nginx.conf](https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/postgres/fpm/web/nginx.conf)
 
-### If you want HTTPS, please add this in config.php
-> var/www/html/config/config.php or NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php
-```
+### If You Want HTTPS, Please Add This in config.php
+> `var/www/html/config/config.php` or `NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php`
+
+```php
 'overwriteprotocol' => 'https'
 ```
 
-### If you have problems with not seeing DB while initialization, please add this in config.php
-> var/www/html/config/config.php or NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php
-```
-  'dbtype' => 'pgsql',
-  'dbname' => 'nextcloud',
-  'dbhost' => 'NAME_OF_YOUR_DOCKER_POSTGRES_DB_CONTAINER_NAME',
-  'dbuser' => 'nextcloud',
-  'dbpassword' => 'DB_PASSWORD_PLEASE_CHANGE'
+### If You Have Problems with Not Seeing DB While Initialization, Please Add This in config.php
+> `var/www/html/config/config.php` or `NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php`
+
+```php
+'dbtype' => 'pgsql',
+'dbname' => 'nextcloud',
+'dbhost' => 'NAME_OF_YOUR_DOCKER_POSTGRES_DB_CONTAINER_NAME',
+'dbuser' => 'nextcloud',
+'dbpassword' => 'DB_PASSWORD_PLEASE_CHANGE'
 ```
 
-### If you want to use custom domain, please add this in config.php
-> var/www/html/config/config.php or NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php
-```
-...
+### If You Want to Use Custom Domain, Please Add This in config.php
+> `var/www/html/config/config.php` or `NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php`
+
+```php
 'trusted_domains' =>
   array (
    0 => 'localhost',
@@ -30,11 +32,10 @@ https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecur
    2 => '192.168.1.50',
    3 => '[fe80::1:50]',
 ),
-...
 ```
-> Please use only DNS name, without http / https, like: server1.example.com
 
+> **Note:** Please use only DNS names without http/https, like: server1.example.com
 
-### Useful links for docker:
-https://hub.docker.com/_/nextcloud/tags \
-https://hub.docker.com/_/postgres/tags 
+### Useful Links for Docker:
+- Nextcloud Docker Images: [Nextcloud Tags](https://hub.docker.com/_/nextcloud/tags)
+- PostgreSQL Docker Images: [PostgreSQL Tags](https://hub.docker.com/_/postgres/tags)
