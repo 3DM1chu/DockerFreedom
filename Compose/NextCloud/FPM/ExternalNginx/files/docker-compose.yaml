@@ -8,10 +8,20 @@ services:
       - NEXTCLOUD_DB_PATH:/var/lib/postgresql/data:z
     env_file:
       - db.env
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 50m
 
   redis:
     image: redis:alpine
     restart: always
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 50m
 
   app:
     image: nextcloud:28.0.5-fpm
@@ -24,6 +34,11 @@ services:
     depends_on:
       - db
       - redis
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 50m
 
   web:
     build: ./web
@@ -34,6 +49,11 @@ services:
       - NEXTCLOUD_PATH:/var/www/html:z,ro
     depends_on:
       - app
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 50m
 
   cron:
     image: nextcloud:28.0.5-fpm
@@ -44,3 +64,8 @@ services:
     depends_on:
       - db
       - redis
+    logging:
+      driver: json-file
+      options:
+        max-file: '2'
+        max-size: 50m
