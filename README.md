@@ -8,7 +8,7 @@ Welcome to DockerFreedom! Here, I share my awesome Docker-ready tips and tricks 
 
 ### Executing on Containers
 
-#### Log in to Interactive Mode with /bin/bash or /bin/sh
+#### > Log in to Interactive Mode with /bin/bash or /bin/sh
 ```bash
 docker exec -it CONTAINER_ID /bin/bash
 ```
