@@ -12,7 +12,7 @@ Welcome to DockerFreedom! Here, I share my awesome Docker-ready tips and tricks 
 ```bash
 docker exec -it CONTAINER_ID /bin/bash
 ```
-> **Note:** You can also use the full container name.
+> **Note:** You can also use the full container name. For IDs, only enough characters distinguishable are needed, docker will notify you if you put too less (it can be even be 1 char!)
 
 **Description:** This command allows you to access a running container's interactive shell. Replace `CONTAINER_ID` with the ID or name of your container.
 
