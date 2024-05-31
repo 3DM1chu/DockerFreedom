@@ -26,7 +26,7 @@ docker-compose logs -f
 
 **Description:** This command attaches to the logs of all services defined in your `docker-compose.yml` file and continuously displays new log entries.
 
-#### Print Log File Sizes for All Containers
+#### > Print Log File Sizes for All Containers
 ```bash
 for container in $(docker ps -qa); do
     log_path=$(docker inspect --format='{{.LogPath}}' $container)
@@ -42,7 +42,7 @@ done | sort -h
 - `du -ch $log_path --exclude='total'`: Prints the size of the log file, excluding the total.
 - `sort -h`: Sorts the log file sizes in human-readable format.
 
-#### Delete Old Logs and Retain Only N Lines with Tail
+#### > Delete Old Logs and Retain Only N Lines with Tail
 ```bash
 find /var/lib/docker/containers/ -name "*-json.log" -exec sh -c 'for log; do tail -n 10000 "$log" > "$log.tmp" && mv "$log.tmp" "$log"; done' sh {} +
 ```
