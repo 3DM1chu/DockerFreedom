@@ -9,6 +9,16 @@ https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecur
 'overwriteprotocol' => 'https'
 ```
 
+### If you have problems with not seeing DB while initialization, please add this in config.php
+> nextcloud/config/config.php
+```
+  'dbtype' => 'pgsql',
+  'dbname' => 'nextcloud',
+  'dbhost' => 'NAME_OF_YOUR_DOCKER_POSTGRES_DB_CONTAINER_NAME',
+  'dbuser' => 'nextcloud',
+  'dbpassword' => 'DB_PASSWORD_PLEASE_CHANGE'
+```
+
 ### If you want to use custom domain, please add this in config.php
 > nextcloud/config/config.php
 ```

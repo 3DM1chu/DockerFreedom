@@ -5,7 +5,7 @@ services:
     image: postgres:16.3-alpine
     restart: always
     volumes:
-      - /mnt/nextcloud_db:/var/lib/postgresql/data:z
+      - NEXTCLOUD_DB_PATH:/var/lib/postgresql/data:z
     env_file:
       - db.env
 
@@ -17,7 +17,7 @@ services:
     image: nextcloud:28.0.5-fpm
     restart: always
     volumes:
-      - /mnt/nextcloud:/var/www/html:z
+      - NEXTCLOUD_PATH:/var/www/html:z
     environment:
       - POSTGRES_HOST=db
       - REDIS_HOST=redis
@@ -31,6 +31,16 @@ services:
     ports:
       - 9000:80
     volumes:
-      - /mnt/nextcloud:/var/www/html:z,ro
+      - NEXTCLOUD_PATH:/var/www/html:z,ro
     depends_on:
       - app
+
+  cron:
+    image: nextcloud:28.0.5-fpm
+    restart: always
+    volumes:
+      - NEXTCLOUD_PATH:/var/www/html:z
+    entrypoint: /cron.sh
+    depends_on:
+      - db
+      - redis
