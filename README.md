@@ -18,7 +18,7 @@ docker exec -it CONTAINER_ID /bin/bash
 
 ### Logs
 
-#### Attach to Docker Compose Logging
+#### > Attach to Docker Compose Logging
 ```bash
 docker-compose logs -f
 ```
