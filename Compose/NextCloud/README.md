@@ -4,7 +4,10 @@
 1. Connect to the Nextcloud container, specifically the one containing `/var/www/html`.
 
 #### Step 2: Login as `www-data`
-2. Login as the `www-data` user. You might need a custom shell to start with. (This is included inside the code.)
+2. Login as the `www-data` user
+```bash
+su -l www-data -s /bin/bash
+```
 
 #### > For PostGreSQL:
 
