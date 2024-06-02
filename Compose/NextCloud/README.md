@@ -35,22 +35,22 @@ TODO :)
 
 **Owner and Group:** `www-data`
 
-> **/var/www/html:**
+> **Inside /var/www/html:**
 - Directories: `rwxr-xr-x` (755) 
   - **Exception:** `data` directory: `rwxrwx---` (770)
 - Files: `rw-r--r--` (644)
   - **Exceptions:** `.htaccess` and `.user.ini`: `rwxrwxr-x` (775)
 
-> **config folder:**
+> **Inside config folder:**
 - Files: `rw-r--r--` (644)
   - **Exception:** `config.php`: `rw-r-----` (640)
 
-> **data folder:**
+> **Inside data folder:**
 - Directories: `rwxrwxr-x` (775)
 - Files: `rw-r-----` (640)
   - **Exceptions:** `.htaccess` and `index.html`: `rw-r--r--` (644), `.ocdata` and `owncloud.db`: `rwxrwxr-x` (775)
 
-> **apps folder:**
+> **Inside apps folder:**
 - Directories: `rwxr-xr-x` (755)
 - Files: `rw-r--r--` (644)
 
