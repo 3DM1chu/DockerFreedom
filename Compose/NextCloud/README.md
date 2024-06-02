@@ -48,7 +48,9 @@ TODO :)
 > **Inside data folder:**
 - Directories: `rwxrwxr-x` (775)
 - Files: `rw-r-----` (640)
-  - **Exceptions:** `.htaccess` and `index.html`: `rw-r--r--` (644), `.ocdata` and `owncloud.db`: `rwxrwxr-x` (775)
+  - **Exceptions:**
+    - `.htaccess` and `index.html`: `rw-r--r--` (644)
+	- `.ocdata` and `owncloud.db`: `rwxrwxr-x` (775)
 
 > **Inside apps folder:**
 - Directories: `rwxr-xr-x` (755)
