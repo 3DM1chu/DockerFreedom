@@ -42,7 +42,7 @@ TODO :)
   - **Exceptions:** `.htaccess` and `.user.ini`: `rwxrwxr-x` (775)
 
 > **config folder:**
-- All files: `rw-r--r--` (644)
+- Files: `rw-r--r--` (644)
   - **Exception:** `config.php`: `rw-r-----` (640)
 
 > **data folder:**
