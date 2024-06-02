@@ -1,6 +1,6 @@
 ### How to Run Migration to Other Database System (e.g., from SQLite to PostGreSQL)
 
-Step 1. Connect to the Nextcloud container, specifically the one containing `/var/www/html`.
+Step 1. Connect to the Nextcloud container, specifically the one containing `/var/www/html`
 
 Step 2: Login as `www-data` user
 ```bash
