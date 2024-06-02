@@ -27,6 +27,7 @@ TODO :)
 
 > **Note:** Replace `DOCKER_DB_CONTAINER_NAME` with the appropriate name. If you don't have static DNS names, you can use network IPs instead. Later, you can change them in `config.php` (dbhost) if needed.
 
+=====================================
 
 ### Quick Tips
 
