@@ -27,6 +27,33 @@ TODO :)
 
 > **Note:** Replace `DOCKER_DB_CONTAINER_NAME` with the appropriate name. If you don't have static DNS names, you can use network IPs instead. Later, you can change them in `config.php` (dbhost) if needed.
 
+
+### Quick Tips
+
+#### Correct File Permissions
+
+**Owner and Group:** `www-data`
+
+> **/var/www/html:**
+- Directories: `rwxr-xr-x` (755) 
+  - **Exception:** `data` directory: `rwxrwx---` (770)
+- Files: `rw-r--r--` (644)
+  - **Exceptions:** `.htaccess` and `.user.ini`: `rwxrwxr-x` (775)
+
+> **config folder:**
+- All files: `rw-r--r--` (644)
+  - **Exception:** `config.php`: `rw-r-----` (640)
+
+> **data folder:**
+- Directories: `rwxrwxr-x` (775)
+- Files: `rw-r-----` (640)
+  - **Exceptions:** `.htaccess` and `index.html`: `rw-r--r--` (644), `.ocdata` and `owncloud.db`: `rwxrwxr-x` (775)
+
+> **apps folder:**
+- Directories: `rwxr-xr-x` (755)
+- Files: `rw-r--r--` (644)
+
+
 ---
 
 For troubleshooting or further assistance, you can refer to [this YouTube video](https://www.youtube.com/watch?v=iFHbzWhKfuU&t=570s) if you encounter any issues with desktop sync.
