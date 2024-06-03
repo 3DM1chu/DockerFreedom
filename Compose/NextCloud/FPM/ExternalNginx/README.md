@@ -94,6 +94,28 @@ TODO :)
 - Directories: `rwxr-xr-x` (755)
 - Files: `rw-r--r--` (644)
 
+#### > If you want to increase timeout for uploads (for big files)
+Step 1: Put it inside server { ... } in nginx.conf
+```
+# set max upload size and increase upload timeout:
+client_max_body_size 200G;
+client_body_timeout 86400s;
+fastcgi_buffers 64 4K;
+```
+
+Step 2: Inside 'location ~ \.php(?:$|/) {' put
+```
+fastcgi_request_buffering off;
+fastcgi_read_timeout 86400s;
+proxy_read_timeout 3600s;
+fastcgi_max_temp_file_size 0;
+```
+
+Useful command for restarting nginx if needed (inside nginx container):
+```bash
+nginx -s reload
+```
+
 ### Useful Links for Docker:
 - Nextcloud Docker Images: [Nextcloud Tags](https://hub.docker.com/_/nextcloud/tags)
 - PostgreSQL Docker Images: [PostgreSQL Tags](https://hub.docker.com/_/postgres/tags)
