@@ -1,5 +1,3 @@
-version: '3.8'
-
 volumes:
   db_storage:
   n8n_storage:
@@ -24,7 +22,7 @@ services:
       retries: 10
 
   n8n:
-    image: docker.n8n.io/n8nio/n8n
+    image: docker.n8n.io/n8nio/n8n:latest
     restart: always
     environment:
       - DB_TYPE=postgresdb
@@ -33,9 +31,12 @@ services:
       - DB_POSTGRESDB_DATABASE=${POSTGRES_DB}
       - DB_POSTGRESDB_USER=${POSTGRES_NON_ROOT_USER}
       - DB_POSTGRESDB_PASSWORD=${POSTGRES_NON_ROOT_PASSWORD}
-      - WEBHOOK_URL=WEBHOOK_URL_ENV_TO_CHANGE
+      - WEBHOOK_URL=WEBHOOK_URL_TO_CHANGE
+      - TZ="Europe/Warsaw"
+      - N8N_PROTOCOL=https # Should have it (domains are quite needed)
+      - N8N_HOST=URL_OF_HOST_TO_CHANGE
     ports:
-      - 21370:5678
+      - 21370:5678 # can be any port...
     links:
       - postgres
     volumes:
