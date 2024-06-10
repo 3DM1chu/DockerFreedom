@@ -56,4 +56,4 @@ find /var/lib/docker/containers/ -name "*-json.log" -exec sh -c 'for log; do tai
 
 ---
 
-Feel free to share your thoughts and any additional tips you might have. Happy Dockering! 🚀
+Feel free to share your thoughts and any additional tips you might have. 🚀
