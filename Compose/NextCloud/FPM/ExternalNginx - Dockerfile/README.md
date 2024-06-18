@@ -10,6 +10,7 @@ docker exec -it DOCKER_CONTAINER_ID -u 33 /bin/bash
 php occ app:enable APP_NAME
 ```
 > -u 33 -> to sign as www-data, APP_NAME can be fe: files_external
+> *For Alpine: https://github.com/nextcloud/docker/blob/master/.examples/dockerfiles/smb/fpm-alpine/Dockerfile
 
 ### If You Want HTTPS, Please Add This in config.php
 > `var/www/html/config/config.php` or `NEXTCLOUD_MOUNT_PATH_TO_VAR_WWW_HTML/config/config.php`
