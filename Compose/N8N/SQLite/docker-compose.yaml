@@ -1,0 +1,21 @@
+networks:
+  ipvlan_net:
+    external: true
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: "n8n-1_app"
+    hostname: "n8n-1_app"
+    environment:
+      - DB_TYPE=sqlite
+      - WEBHOOK_URL=WEBHOOK_URL
+      - TZ="Europe/Warsaw"
+      - N8N_PROTOCOL=https # Should have it (domains are quite needed)
+      - N8N_HOST=HOST_URL
+    volumes:
+      - ./n8n_storage:/home/node/.n8n
+    restart: unless-stopped
+    networks:
+      ipvlan_net:
+        ipv4_address: 10.0.0.2
